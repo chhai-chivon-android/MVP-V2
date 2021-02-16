@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), Contract.View  {
         // user clicks the button
         this.button!!.setOnClickListener(View.OnClickListener { presenter!!.onButtonClick() })     }
 
-        var mPresenter = UserPresenter(this);
+        //var mPresenter = UserPresenter(this);
 
     override fun onResume() {
         super.onResume()
