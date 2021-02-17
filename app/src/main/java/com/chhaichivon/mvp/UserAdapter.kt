@@ -12,14 +12,15 @@ class UserAdapter(userList: List<User>) : RecyclerView.Adapter<UserAdapter.UserV
 
     var userList: List<User> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
-        return UserViewHolder(view)
+        //val view: View = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
+        //return UserViewHolder(view)
+        return UserViewHolder(parent.rootView)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        holder.tvTitle.setText(userList[position].title)
-        holder.tvId.setText(userList[position].id.toString() + "")
-        holder.tvBody.setText(userList[position].body)
+//        holder.tvTitle.setText(userList[position].title)
+//        holder.tvId.setText(userList[position].id.toString() + "")
+//        holder.tvBody.setText(userList[position].body)
     }
 
     override fun getItemCount(): Int {
@@ -27,15 +28,15 @@ class UserAdapter(userList: List<User>) : RecyclerView.Adapter<UserAdapter.UserV
     }
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvId: TextView
-        var tvTitle: TextView
-        var tvBody: TextView
+//        var tvId: TextView
+//        var tvTitle: TextView
+//        var tvBody: TextView
 
-        init {
-            tvId = itemView.findViewById<View>(R.id.user_id) as TextView
-            tvTitle = itemView.findViewById<View>(R.id.user_title) as TextView
-            tvBody = itemView.findViewById<View>(R.id.user_body) as TextView
-        }
+//        init {
+//            tvId = itemView.findViewById<View>(R.id.user_id) as TextView
+//            tvTitle = itemView.findViewById<View>(R.id.user_title) as TextView
+//            tvBody = itemView.findViewById<View>(R.id.user_body) as TextView
+//        }
     }
 
     init {
